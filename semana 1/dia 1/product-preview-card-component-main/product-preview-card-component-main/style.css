@@ -5,21 +5,55 @@ font-family: "Montserrat", sans-serif;
 */
 
 body {
-    background-color: orange;
+    margin: 0;
+    background-color: hsl(30, 38%, 92%);
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 main {
+    display: flex;
     border: 3px solid red;
     width: 650px;
     height: 400px;
 }
 .photo {
     border: 1px solid forestgreen;
-    width: 300px;
+    width: 350px;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .content {
     border: 1px solid blue;
-    width: 350px;
-
+    width: 300px;
+    background-color: white;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.content h3 {
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 7px;
+    color: hsl(228, 12%, 48%);
+}
+.content h1 {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    font-size: 42px;
+    line-height: 1;
+    color: hsl(212, 21%, 14%) ;
+}
+.content p {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%) ;
 }
