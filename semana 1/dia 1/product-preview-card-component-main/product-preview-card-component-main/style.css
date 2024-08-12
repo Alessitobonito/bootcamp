@@ -6,6 +6,20 @@ font-family: "Montserrat", sans-serif;
 
 body {
     background-color: orange;
-    font-family: "Fraunces", serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
+}
+main {
+    border: 3px solid red;
+    width: 650px;
+    height: 400px;
+}
+.photo {
+    border: 1px solid forestgreen;
+    width: 300px;
+}
+.content {
+    border: 1px solid blue;
+    width: 350px;
+
 }
