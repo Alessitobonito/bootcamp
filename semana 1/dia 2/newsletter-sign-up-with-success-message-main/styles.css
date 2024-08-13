@@ -35,13 +35,32 @@ main {
     background-color: hsl(0, 0%, 100%);
     width: 450px;
     margin: 40px;
-    
 }
+.content h1 {
+    font-family: RobotoB;
+    font-weight: 700;
+    font-size: 48px;;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    color: hsl(235, 18%, 26%);
+}
+.content p {
+    line-height: 1.5;
+    margin: 0;
+}
+.content ul {
+    padding-left: 0;   
+}
+
 .content ul li {
-    line-height: 2.5;
+    display: flex;
+    align-items: center; 
+    line-height: 1;
     list-style-type: none; 
-    background-image: url('./assets/images/icon-list.svg');
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 30px;
+    margin-bottom: 10px; 
+}
+
+.content ul li::before {
+    content: url('./assets/images/icon-list.svg'); 
+    margin-right: 16px;
 }
