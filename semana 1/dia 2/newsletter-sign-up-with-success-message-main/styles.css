@@ -1,0 +1,47 @@
+@font-face {
+    font-family: RobotoB;
+    src: url(/assets/fonts/Roboto-Bold.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: RobotoR;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+    font-weight: 500;
+}
+body {
+    font-family: 'RobotoR';
+    font-weight: 400;
+    background-color: hsl(235, 18%, 26%);
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+main {
+    display: flex;
+    height: 600px;
+    width: 850px;
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    width: 450px;
+    margin: 40px;
+    
+}
+.content ul li {
+    line-height: 2.5;
+    list-style-type: none; 
+    background-image: url('./assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+}
