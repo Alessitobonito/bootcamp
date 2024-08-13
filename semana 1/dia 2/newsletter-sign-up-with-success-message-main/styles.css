@@ -11,6 +11,7 @@
 body {
     font-family: 'RobotoR';
     font-weight: 400;
+    color: hsl(235, 18%, 26%);
     background-color: hsl(235, 18%, 26%);
     font-size: 16px;
     margin: 0;
@@ -32,14 +33,13 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    background-color: hsl(0, 0%, 100%);
     width: 450px;
     margin: 40px;
 }
 .content h1 {
     font-family: RobotoB;
     font-weight: 700;
-    font-size: 48px;;
+    font-size: 56px;;
     margin-top: 30px;
     margin-bottom: 16px;
     color: hsl(235, 18%, 26%);
@@ -63,4 +63,23 @@ main {
 .content ul li::before {
     content: url('./assets/images/icon-list.svg'); 
     margin-right: 16px;
+}
+.content form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.content form input {
+    height: 48px;
+    border-radius: 6px;
+    border-width: 1%;
+    border: none;
+    box-shadow: 0 0 0 0.5px rgba(160, 159, 159, 0.7);
+    box-sizing: border-box;
+    padding: 25px 23px 
+}
+.content form label {
+    font-family: RobotoB;
+    font-size: 12px;
 }
