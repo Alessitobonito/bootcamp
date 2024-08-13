@@ -24,7 +24,7 @@ body {
 main {
     display: flex;
     height: 600px;
-    width: 850px;
+    width: 900px;
     border-radius: 32px;
     overflow: hidden;
     background-color: hsl(0, 0%, 100%);
@@ -33,8 +33,9 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    width: 450px;
-    margin: 40px;
+    width: 500px;
+    margin: 45px;
+    margin-right: 55px;
 }
 .content h1 {
     font-family: RobotoB;
@@ -73,7 +74,6 @@ main {
 .content form input {
     height: 48px;
     border-radius: 6px;
-    border-width: 1%;
     border: none;
     box-shadow: 0 0 0 0.5px rgba(160, 159, 159, 0.7);
     box-sizing: border-box;
@@ -82,4 +82,14 @@ main {
 .content form label {
     font-family: RobotoB;
     font-size: 12px;
+}
+.content form button {
+    margin-top: 12px;
+    height: 52px;
+    border-radius: 6px;
+    background-color: hsl(235, 18%, 26%);
+    font-family: robotoB;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
 }
