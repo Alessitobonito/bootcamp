@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+  
+    background-color: hsl(148, 38%, 91%);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100vh;
+  }
+.contact-form {
+    width: 500px;
+    height: 500px;
+  
+    background-color: hsl(0, 0%, 100%);
+    padding: 32px;
+  
+    border-radius: 16px;
+
+    font-family: Karla;
+    font-size: 16px;
+    }
+h1 {
+    margin: 0;
+    padding-bottom: 32px;
+}
+form .row {
+    display: flex;
+    gap: 8px;
+
+}
