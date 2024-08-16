@@ -18,7 +18,7 @@
       </ul>
       <form action="/submit" method="post" novalidate>
         <label for="email"><b>Email address</b></label>
-        <input type="email" id="email" name="email" placeholder="email@company.com" required>
+        <input type="email" id="email" name="email" placeholder="email@company.com" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
         <span class="error-message" id="error-message">Valid email required</span>
         <button type="submit" id="subscribe">Subscribe to monthly newsletter</button>
       </form>

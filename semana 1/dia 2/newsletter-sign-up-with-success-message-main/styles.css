@@ -19,23 +19,33 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
 main {
     display: flex;
     height: 600px;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     border-radius: 32px;
     overflow: hidden;
     background-color: hsl(0, 0%, 100%);
     padding: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
 }
+
 .content {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 45px;
     margin-right: 55px;
+    box-sizing: border-box; 
 }
+
 .content h1 {
     font-family: RobotoB;
     font-weight: 700;
@@ -44,13 +54,16 @@ main {
     margin-bottom: 16px;
     color: hsl(235, 18%, 26%);
 }
+
 .content p {
     line-height: 1.5;
     margin: 0;
 }
+
 .content ul {
     padding-left: 0;
 }
+
 .content ul li {
     display: flex;
     align-items: center;
@@ -58,36 +71,51 @@ main {
     list-style-type: none;
     margin-bottom: 10px;
 }
+
 .content ul li::before {
     content: url('./assets/images/icon-list.svg');
     margin-right: 16px;
 }
+
 .content form {
     margin-top: 16px;
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
     position: relative;
+    align-items: center; 
 }
+
 .content form input {
     height: 48px;
+    width: 100%;
+    max-width: 100%;
     border-radius: 6px;
     border: 1px solid rgba(160, 159, 159, 0.7);
     box-sizing: border-box;
     padding: 0 23px;
     background-color: hsl(0, 0%, 98%);
+    margin-bottom: 10px;
 }
+
 .content form input:focus {
     border-color: hsl(235, 18%, 26%);
 }
+
 .content form input.error {
     border-color: red;
     background-color: hsl(0, 100%, 95%);
 }
+
 .content form label {
     font-family: RobotoB;
     font-size: 12px;
+    width: 100%; 
+    text-align: left; 
 }
+
 .content form .error-message {
     color: red;
     font-size: 12px;
@@ -96,13 +124,92 @@ main {
     top: 0;
     right: 0;
 }
+
 .content form button {
     margin-top: 12px;
     height: 52px;
+    width: 100%;
+    max-width: 100%;
     border-radius: 6px;
     background-color: hsl(235, 18%, 26%);
     font-family: RobotoB;
     font-size: 15px;
     color: white;
     cursor: pointer;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        height: auto;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 16px;
+        margin: 0 auto; 
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+
+    .content p,
+    .content ul li {
+        font-size: 14px;
+    }
+
+    .content ul li::before {
+        margin-right: 8px;
+    }
+
+    .content form {
+        margin-top: 16px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .content form input,
+    .content form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .img {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .img img {
+        border-radius: 0;
+    }
 }
