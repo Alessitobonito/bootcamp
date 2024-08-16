@@ -172,7 +172,7 @@ main {
         max-width: 100%;
         margin: 0;
         padding: 20px;
-        text-align: center;
+        text-align: left;
         box-sizing: border-box;
     }
 
@@ -194,22 +194,24 @@ main {
     .content form {
         margin-top: 16px;
         width: 100%;
-        padding: 0 20px;
     }
 
     .content form input,
     .content form button {
         width: 100%;
-        box-sizing: border-box;
     }
 
     .img {
-        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        margin: 10%;
         padding: 0;
         max-width: 100%;
     }
 
     .img img {
+        width: auto;
         border-radius: 0;
     }
 }
