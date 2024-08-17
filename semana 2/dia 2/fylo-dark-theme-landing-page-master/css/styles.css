@@ -21,19 +21,113 @@ a {
     text-decoration: none;
 }
 
+img {
+    /*TO DO: RWD para imgs*/
+    max-width: 100%;
+    height: auto;
+}
 /* UTILS */
 
 .hidden {
     display: none;
 }
 
+.wrapper {
+    /*width: 1000px;*/
+    width: min(100%-3rem, 1440px);
+}
+
 /*HEADER SECTION*/
 
-.header__wrapper{
-    boder: 1px solid red;
+.header {
+    /* border: 1px solid red;*/
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem;
+
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 0 3rem;
 }
+.header__nav {
+    display: flex;
+    gap: 3rem;
+}
+
+/*HERO SECTION*/
+
+.hero {
+   /* border: 1px solid red;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-image: url(/images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url(/images/bg-curvy-mobile.svg);
+    }
+}
+
+.hero__tittle {
+    width: min(100% - 3rem, 720px);
+
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.hero__text {
+    width: min(100% - 3rem, 720px);
+
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.hero__button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width: 220px;
+    color: white;
+    background:
+     linear-gradient(
+        90deg,
+        hsl(176, 68%, 64%) 0%,
+        hsl(198, 60%, 50%) 100%
+     );
+     transition: all 1s ease;
+}
+
+.hero__button:hover{
+    background:
+        linear-gradient(
+        90deg,
+        hsl(176, 68%, 64%) 35%, 
+        hsl(198, 60%, 50%) 100%
+        );
+    cursor: pointer;
+}
+
+/* FEATURES SECTION  */
+
+/* TODO: COLLABORATION SECTION - Maquetar esta sección */
+
+/* TESTIMONIALS SECTION  */
+
+/* EARLY-ACCESS SECTION  */
+
+/* FOOTER SECTION  */
