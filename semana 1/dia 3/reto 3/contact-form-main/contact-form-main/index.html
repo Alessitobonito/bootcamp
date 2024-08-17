@@ -5,65 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact form</title>
   <link rel="stylesheet" href="/contact-form-main/contact-form-main/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="contact-form">
     <h1>Contact Us</h1>
-    <form action="submit" method="post">
 
+    <form>
       <div class="row">
-        <label for="First Name">
-          First Name <span>*</span>
-          <input type="text" name="First Name" id="First Name" pattern="[A-Za-z]">
-          <p class="error message" id="invalid first name">This field is required</p>
+        <label>
+          First Name <span class="required">*</span>
+          <input type="text" />
         </label>
         
-        <label for="Last Name">
-          Last Name <span>*</span>
-        <input type="text" name="Last Name" id="Last Name" pattern="[A-Za-z]">
-        <p class="error message" id="invalid last name">This field is required</p>
+        <label>
+          Last Name <span class="required">*</span>
+          <input type="text" />
         </label>
       </div>
 
-      <label for="Email Address">
-        Email Address <span>*</span>
-      <input type="email" name="Email Address" id="Email Address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+      <label>
+        Email Address <span class="required">*</span>
+        <input type="text" />
       </label>
-      <span class="error message" id="invalid email address">Please enter a valid email address</span>
 
-      <label for="Query Type">
-        Query Type <span>*</span>
-      <div id="Query Type"> 
-          <div>
-            <input type="radio" name="Query Type"/>
+      <label>
+        Query Type <span class="required">*</span>
+        
+        <div class="row">
+          <div class="query-type">
+            <input type="radio" />
             General Enquiry
           </div>
-          <div>
-            <input type="radio" name="Query Type"/>
+  
+          <div class="query-type">
+            <input type="radio" />
             Support Request
           </div>
-          <span class="error message" id="invalid query type">Please select a query type</span>
         </div>
       </label>
-    
-      <label for="Message">
-        Message <span>*</span>
-      <textarea rows="5" name="Message" id="Message"></textarea>
+      
+      <label>
+        Message <span class="required">*</span>
+        <textarea rows="5"></textarea>
       </label>
-      <span class="error message" id="invalid message">This field is required</span>
-
-      <label for="consent">
-        <input type="checkbox">
-        I consent to being contacted by the team <span>*</span>
+      
+      <label class="flex">
+        <input type="checkbox" />
+        I consent to being contacted by the team <span class="required">*</span>
       </label>
-      <span class="error message" id="invalid consent">To submit this form, please consent to being contacted</span>
-    
-  <button type="submit" id="submit">Submit</button>
-  
-  </form>
-</main>
+      
+      <input type="submit" />
+    </form>
+  </main>
 </body>
 </html>

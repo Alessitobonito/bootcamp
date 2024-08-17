@@ -25,7 +25,7 @@ body {
 
 main {
     display: flex;
-    height: 600px;
+    min-height: 600px;
     width: 100%;
     max-width: 900px;
     border-radius: 32px;
