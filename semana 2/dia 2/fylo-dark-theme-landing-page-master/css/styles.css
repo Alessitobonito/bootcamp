@@ -123,6 +123,13 @@ img {
 }
 
 /* FEATURES SECTION  */
+.features {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 
 /* TODO: COLLABORATION SECTION - Maquetar esta sección */
 
