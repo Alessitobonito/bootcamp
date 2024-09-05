@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+   /* FONTS */
+
+   --font-primary: 'Hanken Grotesk', sans-serif;
+   --font-size: 18px;
+   --font-weight-regular: 500;
+   --font-weight-semibold: 700;
+   --font-weight-bold: 800;
+
+    /* COLORS */
+    --primary-color-light-red: hsl(0, 100%, 67%);
+    --primary-color-orangey-yellow: hsl(39, 100%, 56%);
+    --primary-color-green-teal: hsl(166, 100%, 37%);
+    --primary-color-cobalt-blue: hsl(234, 85%, 45%);
+    --primary-color-white: #FFFFFF;
+
+    --gradient-color-light-slate-blue_background: hsl(252, 100%, 67%);
+    --gradient-color-light-royal-blue_background: hsl(241, 81%, 54%);
+
+    --gradient-color-violet-blue_circle: hsla(256, 72%, 46%, 1);
+    --gradient-color-persian-blue_circle: hsla(241, 72%, 46%, 0);
+}
