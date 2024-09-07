@@ -3,44 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Results-summary</title>
+  <title>Results summary component</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <div class="container">
-
+  <main class="summary">
     <section class="result">
+      <h3 class="result__subtitle">Your Result</h3>
 
-      <h4 class="result__tittle">Your Result</h4>
-      <div class="result__results">
-        <h5 class="result__results__score">76</h5>
-        <small class="result__results__max">of 100</small>
+      <div class="result__stats">
+        <h1>76</h1>
+        <small>of 100</small>
       </div>
 
-      <h3 class="result__great">Great</h3>
+      <h2 class="result__title">Great</h2>
       <p class="result__text">You scored higher than 65% of the people who have taken these tests.</p>
-
     </section>
 
-    <section class="summary">
+    <section class="summary-list">
+      <h3 class="summary-list__title">Summary</h3>
 
-      <h4 class="summary__tittle">Summary</h4>
+      <div class="summary-row--wrap">
 
-      <h5 class="summary__category h5red">Reaction</h5>
-      <p class="summary__scored">80</p> <p class="summary__max">/ 100</p>
+        <div class="summary-row summary-row--reaction">
+          <div class="summary-row__title">
+            <img src="./assets/images/icon-reaction.svg" alt="reaction icon" />
+            Reaction
+          </div>
+          <div class="summary-row__stats">
+            <span>80</span>
+            <span>/</span>
+            <span>100</span>
+          </div>
+        </div>
+        
+        <div class="summary-row summary-row--memory">
+          <div class="summary-row__title">
+            <img src="./assets/images/icon-memory.svg" alt="memory icon" />
+            Memory
+          </div>
+          <div class="summary-row__stats">
+            <span>92</span>
+            <span>/</span>
+            <span>100</span>
+          </div>
+        </div>
 
-      <h5 class="summary__category h5yellow">Memory</h5>
-      <p class="summary__scored">92</p> <p class="summary__max">/ 100</p>
+        <div class="summary-row summary-row--verbal">
+          <div class="summary-row__title">
+            <img src="./assets/images/icon-verbal.svg" alt="verbal icon" />
+            Verbal
+          </div>
+          <div class="summary-row__stats">
+            <span>61</span>
+            <span>/</span>
+            <span>100</span>
+          </div>
+        </div>
 
-      <h5 class="summary__category h5green">Verbal</h5>
-      <p class="summary__scored">61</p> <p class="summary__max">/ 100</p>
-
-      <h5 class="summary__category h5blue">Visual</h5>
-      <p class="summary__scored">72</p> <p class="summary__max">/ 100</p>
+        <div class="summary-row summary-row--visual">
+          <div class="summary-row__title">
+            <img src="./assets/images/icon-visual.svg" alt="visual icon" />
+            Visual
+          </div>
+          <div class="summary-row__stats">
+            <span>72</span>
+            <span>/</span>
+            <span>100</span>
+          </div>
+        </div>
+      </div>
 
       <button class="summary__button">Continue</button>
-
     </section>
-
-  </div>
+  </main>
 </body>
 </html>
