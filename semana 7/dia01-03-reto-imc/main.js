@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else {
             imcText = "Tu Índice de Masa Corporal es OBESO";
         }
+        peso.value = ''
+        altura.value = ''
 
         imcType.textContent = `${imcText} (${imc.toFixed(2)})`;
     });

@@ -8,18 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-screen flex items-center justify-center bg-gray-100">
-    <main class="bg-white rounded-lg shadow-md p-6 w-96">
-        <h1 class="text-center text-lg font-semibold mb-4 border-b-2 ">Indice de masa corporal</h1>
-        <label for="peso" class="block mb-4">
+    <main class="bg-white rounded-lg shadow-md w-96">
+        <h1 class="text-center text-lg font-semibold p-4 mb-4 border-b-2 bg-slate-300">Indice de masa corporal</h1>
+        <label for="peso" class="block mb-4 px-4">
             <p class="mb-2">Peso (KG)</p>
             <input id="peso" class="w-full border border-gray-300 rounded px-3 py-2" type="number" placeholder="Ej. 50">
         </label>
-        <label for="altura" class="block mb-4">
+        <label for="altura" class="block mb-4 px-4">
             <p class="mb-2">Altura (CM)</p>
             <input id="altura" class="w-full border border-gray-300 rounded px-3 py-2" type="number" placeholder="Ej. 170">
         </label>
-        <button class="w-full bg-green-600 text-white rounded py-2 font-semibold">Calcular</button>
-        <div id="IMCtype" class="mt-4 p-3 bg-yellow-100 text-yellow-800 rounded"></div>
+        <button class="w-11/12 bg-green-600 text-white rounded py-2 relative mx-4 font-semibold">Calcular</button>
+        <div id="IMCtype" class="m-4 p-3 bg-yellow-100 text-yellow-800 rounded"></div>
     </main>
 </body>
 </html>
