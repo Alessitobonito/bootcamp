@@ -1,0 +1,14 @@
+GET http://localhost:3000/peliculas
+
+### Crear una nueva pelicula
+
+POST http://localhost:3000/peliculas
+Content-Type: application/json
+
+{
+    "nombre": "Barbie",
+    "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    "estreno": "2023-07-21",
+    "generoId": 1,
+    "resumen": "Resumen de prueba"
+}

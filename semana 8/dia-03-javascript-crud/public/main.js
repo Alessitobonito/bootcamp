@@ -1,50 +1,39 @@
-const fetchPeliculas = async () => {
+import {renderPeliculas} from './utils.js'
+import {fetchPeliculas} from './services.js'
+
+const peliculasForm = document.querySelector('#peliculasform')
+
+peliculasForm.addEventListener('submit', async (event) => {
+    event.preventDefault()
+
+    const pelicula = {
+        nombre: peliculasForm.nombre.value,
+        imagen: peliculasForm.imagen.value,
+        estreno: peliculasForm.estreno.value,
+        generoId: peliculasForm.genero.value,
+        resumen: peliculasForm.resumen.value
+    }
+
     const url = 'http://localhost:3000/peliculas'
 
-    const response = await fetch(url)
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pelicula)
+    })
 
     const data = await response.json()
 
-    return data
-}
+    renderPeliculas(data)
 
-const renderPeliculas = (peliculas) => {
-    const peliculasList = document.querySelector('.movies__list')
-
-    let elements = ''
-
-    peliculas.forEach(pelicula => {
-        elements += `<tr>
-            <td>${pelicula.id}</td>
-            <td>
-                <img src="${pelicula.imagen}" alt="${pelicula.nombre}" />
-            </td>
-            <td>
-                <strong>${pelicula.nombre}</strong>
-                <div class="fs-small">
-                    <strong>Realse:${pelicula.estreno}</strong>
-                </div>
-                <div class="fs-small">
-                    <strong>Genero:${pelicula.generoId}</strong>
-                </div>
-                <div class="fs-small">
-                    <strong>Sinopsis:${pelicula.resumen}</strong>
-                </div>                
-            </td>
-            <td>
-            <div class="flex gap-0.5"> 
-               <button class="pelicula__edit">Editar</button>
-               <button class="pelicula__delete">Eliminar</button>
-            </div>
-
-            </td>
-        </tr>`
-    })
-
-    peliculasList.innerHTML = elements
-}
+    if (response.ok) {
+        peliculasForm.reset()
+    }
+})
 
 fetchPeliculas()
     .then(data => {
         renderPeliculas(data)
-    })
+    }) 
