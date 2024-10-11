@@ -8,14 +8,26 @@ const App = () => {
   const [editingStudent, setEditingStudent] = useState(null);
 
   useEffect(() => {
-    const storedStudents = localStorage.getItem('students');
+    const fetchStudents = async () => {
+      const url = 'https://67086e058e86a8d9e42ee515.mockapi.io/api/v1/Students';
+      const response = await fetch(url);
+      return await response.json();
+
+    };
+    fetchStudents().then((dataStudents) => {
+      setStudents(dataStudents);
+    });
+    }, []);
+
+  useEffect(() => {
+    const storedStudents = localStorage.getItem('STUDENTS');
     if (storedStudents) {
       setStudents(JSON.parse(storedStudents));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('students', JSON.stringify(students));
+    localStorage.setItem('STUDENTS', JSON.stringify(students));
   }, [students]);
 
   const handleSave = (e) => {
